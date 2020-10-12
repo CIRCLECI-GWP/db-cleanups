@@ -14,9 +14,8 @@ jobs:
 
 orbs:
   heroku: circleci/heroku@0.0.10
-
+version: 2.1
 workflows:
-  version: 2
   deploy:
     jobs:
       - build
