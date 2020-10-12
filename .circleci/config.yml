@@ -24,5 +24,9 @@ workflows:
     triggers:
       - schedule:
           cron: "* * * * *" # use cron syntax to set the schedule
+          filters:
+            branches:
+              only:
+                - main
     jobs:
       - clean
