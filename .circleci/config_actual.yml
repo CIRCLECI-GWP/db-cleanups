@@ -24,7 +24,7 @@ workflows:
   clean_old_logs:
     triggers:
       - schedule:
-          cron: "0 0 1 1 *" # use cron syntax to set the schedule
+          cron: "* * * * *" # use cron syntax to set the schedule
           filters:
             branches:
               only:
