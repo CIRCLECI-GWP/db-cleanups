@@ -10,7 +10,9 @@ jobs:
     docker:
       - image: circleci/node:10.16.3
     steps:
-      - curl https://db-cleanups.herokuapp.com/logs/clean
+      - run:
+          name: Clean Database
+          command: "curl https://db-cleanups.herokuapp.com/logs/clean"
 
 orbs:
   heroku: circleci/heroku@0.0.10
