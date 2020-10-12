@@ -1,0 +1,28 @@
+jobs:
+  build:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - heroku/deploy-via-git
+
+  clean:
+    docker:
+      - image: circleci/node:10.16.3
+    steps:
+      - curl https://db-cleanups.herokuapp.com/logs/clean
+
+orbs:
+  heroku: circleci/heroku@0.0.10
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - build
+  clean_old_logs:
+    triggers:
+      - schedule:
+          cron: "* * * * *" # use cron syntax to set the schedule
+    jobs:
+      - clean
