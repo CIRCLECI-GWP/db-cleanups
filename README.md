@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/CIRCLECI-GWP/db-cleanups.svg?style=svg)](https://circleci.com/gh/CIRCLECI-GWP/db-cleanups)
+[![CircleCI](https://circleci.com/gh/CIRCLECI-GWP/db-cleanups/tree/tutorial.svg?style=svg)](https://circleci.com/gh/CIRCLECI-GWP/db-cleanups)
 
 <p align="center"><img src="https://avatars3.githubusercontent.com/u/59034516"></p>
 
